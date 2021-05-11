@@ -20,6 +20,14 @@ class FoodItemTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
+    class var reuseIdentifier: String {
+        return "foodItemReuseIdentifier"
+    }
+    
+    class var nibName: String {
+        return "FoodItemTableViewCell"
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -31,6 +39,7 @@ class FoodItemTableViewCell: UITableViewCell {
         foodDescription.text = foodItem.description
         foodPrice.text = "LKR- \(foodItem.price)"
         foodImage.kf.setImage(with: URL(string: foodItem.foodImage))
+        //foodAvailableSwitch.isOn = foodItem.isActive
         
         if foodItem.discount > 0 {
             foodDiscount.isHidden = false

@@ -22,6 +22,7 @@ struct FoodItem {
     var price: Double
     var discount: Int
     var category: String
+    //var isActive: Bool
 }
 
 struct Category {

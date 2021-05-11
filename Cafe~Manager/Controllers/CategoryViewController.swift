@@ -16,10 +16,7 @@ class CategoryViewController: UIViewController {
     
     let databaseReference = Database.database().reference()
     
-    
-    
     var categoryList: [Category] = []
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

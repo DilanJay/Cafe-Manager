@@ -82,7 +82,7 @@
                 <outlet property="foodName" destination="bLh-Ht-0aW" id="Ixn-0U-DqM"/>
                 <outlet property="foodPrice" destination="EZo-pY-5xv" id="Tpw-Gg-eGB"/>
             </connections>
-            <point key="canvasLocation" x="207" y="92"/>
+            <point key="canvasLocation" x="-220" y="0.0"/>
         </tableViewCell>
     </objects>
     <resources>

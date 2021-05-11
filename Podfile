@@ -8,6 +8,7 @@ target 'Cafe~Manager' do
   # Pods for Cafe~Manager
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
+pod 'Firebase/Storage'
 pod 'Kingfisher'
 pod 'Loaf'
 pod 'SPPermissions/Location'
