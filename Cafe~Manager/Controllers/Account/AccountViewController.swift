@@ -16,6 +16,8 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var lblPrice: UILabel!
     @IBOutlet weak var tblAccount: UITableView!
     
+    let sessionManager = SessionManager()
+    
     let databaseReference = Database.database().reference()
     
     var orderList: [Order] = []
@@ -35,6 +37,10 @@ class AccountViewController: UIViewController {
         fetchOrder()
     }
     
+    @IBAction func btnSignOut(_ sender: UIButton) {
+        sessionManager.clearUserLoggedStatus()
+        dismiss(animated: true, completion: nil)
+    }
 }
 
 extension AccountViewController {

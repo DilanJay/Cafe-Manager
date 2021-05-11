@@ -13,6 +13,7 @@ class OrderViewController: UIViewController {
     
     var orders: [Order] = []
     var filteredOrder: [Order] = []
+    let sessionManager = SessionManager()
 
     @IBOutlet weak var tblOrder: UITableView!
     @IBOutlet weak var segmentControl: UISegmentedControl!
@@ -30,6 +31,11 @@ class OrderViewController: UIViewController {
 
     @IBAction func segmentedControl(_ sender: UISegmentedControl) {
         filterOrders(status: sender.selectedSegmentIndex)
+    }
+    
+    @IBAction func btnSignOut(_ sender: UIButton) {
+        sessionManager.clearUserLoggedStatus()
+        dismiss(animated: true, completion: nil)
     }
 }
 

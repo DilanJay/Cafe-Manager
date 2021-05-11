@@ -720,6 +720,9 @@
                                 <state key="normal">
                                     <imageReference key="image" image="square.and.arrow.up.fill" catalog="system" symbolScale="large" renderingMode="original"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnSignOut:" destination="Bfd-es-L3t" eventType="touchUpInside" id="OHX-VP-7Ur"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2aH-Wd-gFJ">
                                 <rect key="frame" x="20" y="135" width="335" height="483"/>
@@ -791,6 +794,9 @@
                                 <state key="normal">
                                     <imageReference key="image" image="square.and.arrow.up.fill" catalog="system" symbolScale="large" renderingMode="original"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnSignOut:" destination="gKv-ja-291" eventType="touchUpInside" id="Vsp-1D-XAA"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="500" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2PY-Y8-0HO">
                                 <rect key="frame" x="10" y="169.5" width="355" height="438.5"/>
