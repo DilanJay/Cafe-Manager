@@ -149,6 +149,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6908FA77264ADFBE00D34EA2 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				69E3185C264926F000C310C9 /* StoreViewController.swift */,
+				69E3186B2649279300C310C9 /* PreviewViewController.swift */,
+				69E31870264927B400C310C9 /* CategoryViewController.swift */,
+				69E31884264A19BB00C310C9 /* MenuViewController.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		6908FA78264ADFC500D34EA2 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				69E318612649276800C310C9 /* OrderViewController.swift */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		6908FA79264ADFCE00D34EA2 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				69E318662649277B00C310C9 /* AccountViewController.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
 		69E317CB26491D0400C310C9 = {
 			isa = PBXGroup;
 			children = (
@@ -226,16 +253,13 @@
 		69E3182326491EB900C310C9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6908FA79264ADFCE00D34EA2 /* Account */,
+				6908FA78264ADFC500D34EA2 /* Order */,
+				6908FA77264ADFBE00D34EA2 /* Store */,
 				69E318482649232D00C310C9 /* SignInViewController.swift */,
 				69E3184D2649246400C310C9 /* SignUpViewController.swift */,
 				69E31852264925D000C310C9 /* LaunchViewController.swift */,
 				69E31857264926C000C310C9 /* ForgotPasswordViewController.swift */,
-				69E3185C264926F000C310C9 /* StoreViewController.swift */,
-				69E318612649276800C310C9 /* OrderViewController.swift */,
-				69E318662649277B00C310C9 /* AccountViewController.swift */,
-				69E3186B2649279300C310C9 /* PreviewViewController.swift */,
-				69E31870264927B400C310C9 /* CategoryViewController.swift */,
-				69E31884264A19BB00C310C9 /* MenuViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

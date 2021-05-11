@@ -1,5 +1,5 @@
 //
-//  OrderViewController.swift
+//  AccountViewController.swift
 //  Cafe~Manager
 //
 //  Created by Dilan Pramodya on 2021-05-10.
@@ -9,49 +9,56 @@ import UIKit
 import Firebase
 import Loaf
 
-class OrderViewController: UIViewController {
-    
-    var orders: [Order] = []
-    var filteredOrder: [Order] = []
+class AccountViewController: UIViewController {
 
-    @IBOutlet weak var tblOrder: UITableView!
-    @IBOutlet weak var segmentControl: UISegmentedControl!
+    @IBOutlet weak var txtFrom: UITextField!
+    @IBOutlet weak var txtTo: UITextField!
+    @IBOutlet weak var lblPrice: UILabel!
+    @IBOutlet weak var tblAccount: UITableView!
     
     let databaseReference = Database.database().reference()
-
+    
+    var orderList: [Order] = []
+    var filterOrders: [Order] = []
+    
+    var orderTotal: Double = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tblOrder.register(UINib(nibName: OrderTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: OrderTableViewCell.reuseIdentifier)
+        tblAccount.register(UINib(nibName: OrderSummeryTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: OrderSummeryTableViewCell.reuseIdentifier)
+        
+//        self.tblAccount.estimatedRowHeight = 100
+//        self.tblAccount.rowHeight = UITableView.automaticDimension
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.fetchOrder()
+        fetchOrder()
     }
-
-    @IBAction func segmentedControl(_ sender: UISegmentedControl) {
-        filterOrders(status: sender.selectedSegmentIndex)
-    }
+    
 }
 
-extension OrderViewController {
-    func filterOrders(status: Int) {
-        filteredOrder.removeAll()
-        filteredOrder = self.orders.filter {$0.status_code == status}
-        tblOrder.reloadData()
+extension AccountViewController {
+    func filteredOrders() {
+        
+    }
+    
+    func getOrderTotal() {
+        self.orderTotal = 0
+        for order in filterOrders {
+            for item in order.orderItems {
+                self.orderTotal += item.price
+            }
+        }
+        lblPrice.text = "\(orderTotal) LKR"
     }
     
     func fetchOrder() {
-        self.filteredOrder.removeAll()
-        self.orders.removeAll()
+        self.filterOrders.removeAll()
+        self.orderList.removeAll()
         self.databaseReference
             .child("order")
-            .observe(.value, with: {
+            .observeSingleEvent(of: .value, with: {
                 snapshot in
-            //})
-//            .observeSingleEvent(of: .value, with: {
-//                snapshot in
-                self.filteredOrder.removeAll()
-                self.orders.removeAll()
                 if snapshot.hasChildren() {
                     guard let data = snapshot.value as? [String: Any] else {
                         Loaf("Cannot parse data ",  state: .error, sender: self).show()
@@ -75,12 +82,12 @@ extension OrderViewController {
                                     }
                                 }
                             }
-                            self.orders.append(singleOrder)
+                            self.orderList.append(singleOrder)
                         }
                     }
-                    self.filteredOrder.append(contentsOf: self.orders)
-                    self.segmentedControl(self.segmentControl)
-                    
+                    self.filterOrders.append(contentsOf: self.orderList)
+                    self.getOrderTotal()
+                    self.tblAccount.reloadData()
                 } else {
                     Loaf("Order found failed",  state: .error, sender: self).show()
                 }
@@ -88,15 +95,17 @@ extension OrderViewController {
     }
 }
 
-extension OrderViewController: UITableViewDelegate, UITableViewDataSource {
+extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.filteredOrder.count
+        return filterOrders.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tblOrder.dequeueReusableCell(withIdentifier: OrderTableViewCell.reuseIdentifier, for: indexPath) as! OrderTableViewCell
+        let cell = tblAccount.dequeueReusableCell(withIdentifier: OrderSummeryTableViewCell.reuseIdentifier, for: indexPath) as! OrderSummeryTableViewCell
         cell.selectionStyle = .none
-        cell.confligCell(order: filteredOrder[indexPath.row])
+        cell.confligCell(order: filterOrders[indexPath.row ])
         return cell
     }
+    
+    
 }
