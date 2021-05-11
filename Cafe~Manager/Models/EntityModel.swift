@@ -14,6 +14,17 @@ struct Admin {
     var phoneNo: String
 }
 
+struct FoodItem {
+    var foodID: String
+    var foodImage: String
+    var foodName: String
+    var description: String
+    var price: Double
+    var discount: Int
+    var category: String
+}
+
 struct Category {
+    var categoryID: String
     var categoryName: String
 }

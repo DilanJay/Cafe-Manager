@@ -22,6 +22,17 @@
 		69E318492649232D00C310C9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E318482649232D00C310C9 /* SignInViewController.swift */; };
 		69E3184E2649246400C310C9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E3184D2649246400C310C9 /* SignUpViewController.swift */; };
 		69E31853264925D000C310C9 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E31852264925D000C310C9 /* LaunchViewController.swift */; };
+		69E31858264926C000C310C9 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E31857264926C000C310C9 /* ForgotPasswordViewController.swift */; };
+		69E3185D264926F000C310C9 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E3185C264926F000C310C9 /* StoreViewController.swift */; };
+		69E318622649276800C310C9 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E318612649276800C310C9 /* OrderViewController.swift */; };
+		69E318672649277B00C310C9 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E318662649277B00C310C9 /* AccountViewController.swift */; };
+		69E3186C2649279300C310C9 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E3186B2649279300C310C9 /* PreviewViewController.swift */; };
+		69E31871264927B400C310C9 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E31870264927B400C310C9 /* CategoryViewController.swift */; };
+		69E318782649284F00C310C9 /* FoodItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E318762649284F00C310C9 /* FoodItemTableViewCell.swift */; };
+		69E318792649284F00C310C9 /* FoodItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E318772649284F00C310C9 /* FoodItemTableViewCell.xib */; };
+		69E3187F26493D3A00C310C9 /* CategoryInfomationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E3187D26493D3A00C310C9 /* CategoryInfomationTableViewCell.swift */; };
+		69E3188026493D3A00C310C9 /* CategoryInfomationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69E3187E26493D3A00C310C9 /* CategoryInfomationTableViewCell.xib */; };
+		69E31885264A19BB00C310C9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E31884264A19BB00C310C9 /* MenuViewController.swift */; };
 		A576C95EAE7F334669FE4016 /* Pods_Cafe_ManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A9BAED88FF53E3DCDC6C1D /* Pods_Cafe_ManagerTests.framework */; };
 		D5378AE64585A0DE93D11179 /* Pods_Cafe_Manager_Cafe_ManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0748C828BCBABA12CE0DB93 /* Pods_Cafe_Manager_Cafe_ManagerUITests.framework */; };
 /* End PBXBuildFile section */
@@ -68,6 +79,17 @@
 		69E318482649232D00C310C9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		69E3184D2649246400C310C9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		69E31852264925D000C310C9 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		69E31857264926C000C310C9 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		69E3185C264926F000C310C9 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		69E318612649276800C310C9 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		69E318662649277B00C310C9 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		69E3186B2649279300C310C9 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		69E31870264927B400C310C9 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		69E318762649284F00C310C9 /* FoodItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemTableViewCell.swift; sourceTree = "<group>"; };
+		69E318772649284F00C310C9 /* FoodItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodItemTableViewCell.xib; sourceTree = "<group>"; };
+		69E3187D26493D3A00C310C9 /* CategoryInfomationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryInfomationTableViewCell.swift; sourceTree = "<group>"; };
+		69E3187E26493D3A00C310C9 /* CategoryInfomationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryInfomationTableViewCell.xib; sourceTree = "<group>"; };
+		69E31884264A19BB00C310C9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		6D144A2C8C2BB71AD7D9791B /* Pods-Cafe~ManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cafe~ManagerTests.release.xcconfig"; path = "Target Support Files/Pods-Cafe~ManagerTests/Pods-Cafe~ManagerTests.release.xcconfig"; sourceTree = "<group>"; };
 		717F8AB584E125B737BF5500 /* Pods-Cafe~Manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cafe~Manager.release.xcconfig"; path = "Target Support Files/Pods-Cafe~Manager/Pods-Cafe~Manager.release.xcconfig"; sourceTree = "<group>"; };
 		78C781C3796761022BCC7A6B /* Pods_Cafe_Manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cafe_Manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +160,7 @@
 		69E317D626491D0400C310C9 /* Cafe~Manager */ = {
 			isa = PBXGroup;
 			children = (
+				69E318752649281F00C310C9 /* TableViewCells */,
 				69E3183226491FF700C310C9 /* Utility */,
 				69E3182326491EB900C310C9 /* Controllers */,
 				69E3181F26491EB200C310C9 /* Views */,
@@ -192,6 +215,13 @@
 				69E318482649232D00C310C9 /* SignInViewController.swift */,
 				69E3184D2649246400C310C9 /* SignUpViewController.swift */,
 				69E31852264925D000C310C9 /* LaunchViewController.swift */,
+				69E31857264926C000C310C9 /* ForgotPasswordViewController.swift */,
+				69E3185C264926F000C310C9 /* StoreViewController.swift */,
+				69E318612649276800C310C9 /* OrderViewController.swift */,
+				69E318662649277B00C310C9 /* AccountViewController.swift */,
+				69E3186B2649279300C310C9 /* PreviewViewController.swift */,
+				69E31870264927B400C310C9 /* CategoryViewController.swift */,
+				69E31884264A19BB00C310C9 /* MenuViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -203,6 +233,17 @@
 				69E3183B2649205700C310C9 /* SessionManager.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		69E318752649281F00C310C9 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				69E318762649284F00C310C9 /* FoodItemTableViewCell.swift */,
+				69E318772649284F00C310C9 /* FoodItemTableViewCell.xib */,
+				69E3187D26493D3A00C310C9 /* CategoryInfomationTableViewCell.swift */,
+				69E3187E26493D3A00C310C9 /* CategoryInfomationTableViewCell.xib */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 		D61B00152BE137C6A9C5F350 /* Pods */ = {
@@ -329,7 +370,9 @@
 				69E317E426491D0600C310C9 /* LaunchScreen.storyboard in Resources */,
 				69E317E126491D0600C310C9 /* Assets.xcassets in Resources */,
 				69E3182B26491F9000C310C9 /* GoogleService-Info.plist in Resources */,
+				69E3188026493D3A00C310C9 /* CategoryInfomationTableViewCell.xib in Resources */,
 				69E317DF26491D0400C310C9 /* Main.storyboard in Resources */,
+				69E318792649284F00C310C9 /* FoodItemTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,13 +500,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69E318782649284F00C310C9 /* FoodItemTableViewCell.swift in Sources */,
+				69E3185D264926F000C310C9 /* StoreViewController.swift in Sources */,
 				69E318412649208E00C310C9 /* EntityModel.swift in Sources */,
+				69E31871264927B400C310C9 /* CategoryViewController.swift in Sources */,
+				69E318672649277B00C310C9 /* AccountViewController.swift in Sources */,
+				69E3187F26493D3A00C310C9 /* CategoryInfomationTableViewCell.swift in Sources */,
 				69E3184E2649246400C310C9 /* SignUpViewController.swift in Sources */,
 				69E318342649203000C310C9 /* InputValidator.swift in Sources */,
 				69E318492649232D00C310C9 /* SignInViewController.swift in Sources */,
 				69E317D826491D0400C310C9 /* AppDelegate.swift in Sources */,
+				69E31858264926C000C310C9 /* ForgotPasswordViewController.swift in Sources */,
+				69E31885264A19BB00C310C9 /* MenuViewController.swift in Sources */,
 				69E3183C2649205700C310C9 /* SessionManager.swift in Sources */,
 				69E317DA26491D0400C310C9 /* SceneDelegate.swift in Sources */,
+				69E318622649276800C310C9 /* OrderViewController.swift in Sources */,
+				69E3186C2649279300C310C9 /* PreviewViewController.swift in Sources */,
 				69E31853264925D000C310C9 /* LaunchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
