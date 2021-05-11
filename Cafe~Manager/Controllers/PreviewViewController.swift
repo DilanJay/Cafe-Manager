@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import Loaf
 
 class PreviewViewController: UIViewController {
 
@@ -19,6 +20,7 @@ class PreviewViewController: UIViewController {
     var foodItemList: [FoodItem] = []
     var filteredList: [FoodItem] = []
     var selectedCategoryIndex = 0
+    var selectedFoodIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,16 +30,22 @@ class PreviewViewController: UIViewController {
         if let flowLayout = self.collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = CGSize(width: 80, height: 30)
         }
+        tblPreview.register(UINib(nibName: FoodItemTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: FoodItemTableViewCell.reuseIdentifier)
+        
+
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         refreshCategory()
+        refreshFood()
     }
+    
 }
 
 extension PreviewViewController {
     func filterFood(category: Category) {
-        
+        filteredList = foodItemList.filter{$0.category == category.categoryName}
+        tblPreview.reloadData()
     }
     
     func refreshCategory() {
@@ -58,33 +66,58 @@ extension PreviewViewController {
                 }
             })
     }
+    
+    func refreshFood() {
+        foodItemList.removeAll()
+        filteredList.removeAll()
+        
+        databaseReference
+            .child("foodItems")
+            .observeSingleEvent(of: .value, with: {
+                snapshot in
+                if snapshot.hasChildren() {
+                    guard let data = snapshot.value as? [String: Any] else {
+                        NSLog("Can not parse data" )
+                        return
+                    }
+                    for food in data {
+                        if let foodInfo = food.value as? [String: Any] {
+                            self.foodItemList.append(FoodItem(
+                                                        foodID: food.key,
+                                                        foodImage: foodInfo["image"] as! String,
+                                                        foodName: foodInfo["name"] as! String,
+                                                        description: foodInfo["description"] as! String,
+                                                        price: foodInfo["price"] as! Double ,
+                                                        discount: foodInfo["discount"] as! Int,
+                                                        category: foodInfo["category"] as! String))
+                        }
+                    }
+                    self.filteredList.append(contentsOf: self.foodItemList)
+                    self.tblPreview.reloadData()
+                }
+            })
+    }
 }
 
-//extension PreviewViewController: UITabBarDelegate, UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return filteredList.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tblPreview.dequeueReusableCell(withIdentifier: FoodItemTableViewCell.reuseIdentifier, for: indexPath) as! FoodItemTableViewCell
-//        cell.selectionStyle = .none
-//        cell.delegate = self
-//        cell.configureCell(foodItem: filteredFood[indexPath.row], index: indexPath.row)
-//        return cell
-//    }
-//
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        selectedFoodIndex = indexPath.row
-//    }
-//
-//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        cell.transform = CGAffineTransform(translationX: cell.contentView.frame.width, y: 0)
-//        UIView.animate(withDuration: 0.5, delay: 0.01 * Double(indexPath.row), usingSpringWithDamping: 0.4, initialSpringVelocity: 0.1,
-//                       options: .curveEaseIn, animations: {
-//                        cell.transform = CGAffineTransform(translationX: cell.contentView.frame.width, y: cell.contentView.frame.height)
-//                       })
-//    }
-//}
+extension PreviewViewController: UITabBarDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return filteredList.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tblPreview.dequeueReusableCell(withIdentifier: FoodItemTableViewCell.reuseIdentifier, for: indexPath) as! FoodItemTableViewCell
+        cell.selectionStyle = .none
+        //cell.delegate = self
+        cell.confligCell(foodItem: filteredList[indexPath.row], index: indexPath.row)
+        return cell
+    } 
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedFoodIndex = indexPath.row
+    }
+
+
+}
 
 extension PreviewViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

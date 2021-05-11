@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		29A5DDFACBC9721F3088C8C5 /* Pods_Cafe_Manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C781C3796761022BCC7A6B /* Pods_Cafe_Manager.framework */; };
+		6908FA6B264ACB7100D34EA2 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6908FA69264ACB7100D34EA2 /* OrderTableViewCell.swift */; };
+		6908FA6C264ACB7100D34EA2 /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6908FA6A264ACB7100D34EA2 /* OrderTableViewCell.xib */; };
+		6908FA72264ADEE500D34EA2 /* OrderSummeryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6908FA70264ADEE500D34EA2 /* OrderSummeryTableViewCell.swift */; };
+		6908FA73264ADEE600D34EA2 /* OrderSummeryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6908FA71264ADEE500D34EA2 /* OrderSummeryTableViewCell.xib */; };
 		69E317D826491D0400C310C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E317D726491D0400C310C9 /* AppDelegate.swift */; };
 		69E317DA26491D0400C310C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E317D926491D0400C310C9 /* SceneDelegate.swift */; };
 		69E317DF26491D0400C310C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69E317DD26491D0400C310C9 /* Main.storyboard */; };
@@ -62,6 +66,10 @@
 		258CD1EFFCF88F5B718EB5A0 /* Pods-Cafe~Manager-Cafe~ManagerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cafe~Manager-Cafe~ManagerUITests.release.xcconfig"; path = "Target Support Files/Pods-Cafe~Manager-Cafe~ManagerUITests/Pods-Cafe~Manager-Cafe~ManagerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4D1CC18621D138243A6AE455 /* Pods-Cafe~Manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cafe~Manager.debug.xcconfig"; path = "Target Support Files/Pods-Cafe~Manager/Pods-Cafe~Manager.debug.xcconfig"; sourceTree = "<group>"; };
 		5899E6F5E7C1D452AB5F64E2 /* Pods-Cafe~Manager-Cafe~ManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cafe~Manager-Cafe~ManagerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Cafe~Manager-Cafe~ManagerUITests/Pods-Cafe~Manager-Cafe~ManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6908FA69264ACB7100D34EA2 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		6908FA6A264ACB7100D34EA2 /* OrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
+		6908FA70264ADEE500D34EA2 /* OrderSummeryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSummeryTableViewCell.swift; sourceTree = "<group>"; };
+		6908FA71264ADEE500D34EA2 /* OrderSummeryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderSummeryTableViewCell.xib; sourceTree = "<group>"; };
 		69E317D426491D0400C310C9 /* Cafe~Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cafe~Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E317D726491D0400C310C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69E317D926491D0400C310C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -251,6 +259,10 @@
 				69E3187E26493D3A00C310C9 /* CategoryInfomationTableViewCell.xib */,
 				69E318A9264A5BD700C310C9 /* CategoryCollectionViewCell.swift */,
 				69E318AA264A5BD700C310C9 /* CategoryCollectionViewCell.xib */,
+				6908FA69264ACB7100D34EA2 /* OrderTableViewCell.swift */,
+				6908FA6A264ACB7100D34EA2 /* OrderTableViewCell.xib */,
+				6908FA70264ADEE500D34EA2 /* OrderSummeryTableViewCell.swift */,
+				6908FA71264ADEE500D34EA2 /* OrderSummeryTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -382,7 +394,9 @@
 				69E3182B26491F9000C310C9 /* GoogleService-Info.plist in Resources */,
 				69E3188026493D3A00C310C9 /* CategoryInfomationTableViewCell.xib in Resources */,
 				69E317DF26491D0400C310C9 /* Main.storyboard in Resources */,
+				6908FA6C264ACB7100D34EA2 /* OrderTableViewCell.xib in Resources */,
 				69E318792649284F00C310C9 /* FoodItemTableViewCell.xib in Resources */,
+				6908FA73264ADEE600D34EA2 /* OrderSummeryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,10 +530,12 @@
 				69E3188A264A1BDC00C310C9 /* ImageFetcher.swift in Sources */,
 				69E31871264927B400C310C9 /* CategoryViewController.swift in Sources */,
 				69E318672649277B00C310C9 /* AccountViewController.swift in Sources */,
+				6908FA6B264ACB7100D34EA2 /* OrderTableViewCell.swift in Sources */,
 				69E3187F26493D3A00C310C9 /* CategoryInfomationTableViewCell.swift in Sources */,
 				69E3184E2649246400C310C9 /* SignUpViewController.swift in Sources */,
 				69E318342649203000C310C9 /* InputValidator.swift in Sources */,
 				69E318492649232D00C310C9 /* SignInViewController.swift in Sources */,
+				6908FA72264ADEE500D34EA2 /* OrderSummeryTableViewCell.swift in Sources */,
 				69E318AB264A5BD800C310C9 /* CategoryCollectionViewCell.swift in Sources */,
 				69E317D826491D0400C310C9 /* AppDelegate.swift in Sources */,
 				69E31858264926C000C310C9 /* ForgotPasswordViewController.swift in Sources */,

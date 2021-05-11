@@ -17,6 +17,9 @@ class FoodItemTableViewCell: UITableViewCell {
     @IBOutlet weak var foodDiscount: UILabel!
     @IBOutlet weak var foodAvailableSwitch: UISwitch!
     
+    var rowIndex = 0
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -28,13 +31,8 @@ class FoodItemTableViewCell: UITableViewCell {
     class var nibName: String {
         return "FoodItemTableViewCell"
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-    }
     
-    func setUpView(foodItem: FoodItem) {
+    func confligCell(foodItem: FoodItem, index: Int) {
         foodName.text = foodItem.foodName
         foodDescription.text = foodItem.description
         foodPrice.text = "LKR- \(foodItem.price)"
@@ -48,5 +46,12 @@ class FoodItemTableViewCell: UITableViewCell {
             foodDiscount.isHidden = true
             foodDiscount.text = ""
         }
+        
+        self.rowIndex = index
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
     }
 }

@@ -29,3 +29,17 @@ struct Category {
     var categoryID: String
     var categoryName: String
 }
+
+struct Order {
+    var orderID: String
+    var customer_name: String
+    var customer_email: String
+    var date: Double
+    var status_code: Int
+    var orderItems: [OrderItem] = []
+}
+
+struct OrderItem {
+    var item_name: String
+    var price: Double
+}

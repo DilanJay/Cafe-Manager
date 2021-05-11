@@ -721,9 +721,13 @@
                                     <imageReference key="image" image="square.and.arrow.up.fill" catalog="system" symbolScale="large" renderingMode="original"/>
                                 </state>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2aH-Wd-gFJ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2aH-Wd-gFJ">
                                 <rect key="frame" x="20" y="135" width="335" height="483"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Bfd-es-L3t" id="7fa-SI-Ajk"/>
+                                    <outlet property="delegate" destination="Bfd-es-L3t" id="abf-T8-ejh"/>
+                                </connections>
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jn0-RX-29N">
                                 <rect key="frame" x="0.0" y="65" width="375" height="41"/>
@@ -739,6 +743,9 @@
                                     <segment title="CANCEL"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" red="0.51415842769999998" green="0.32102575900000002" blue="0.019399238749999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="segmentedControl:" destination="Bfd-es-L3t" eventType="valueChanged" id="ewI-1N-cdw"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rba-Q3-3CN"/>
@@ -758,6 +765,10 @@
                     <tabBarItem key="tabBarItem" title="ORDER" id="LYc-YC-oA8">
                         <imageReference key="image" image="newspaper.fill" catalog="system" renderingMode="original"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="segmentControl" destination="jn0-RX-29N" id="EVv-cF-l03"/>
+                        <outlet property="tblOrder" destination="2aH-Wd-gFJ" id="Iki-83-XFz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xwU-D2-wL2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -955,6 +966,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="250" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5dL-BY-Puf">
                                 <rect key="frame" x="16" y="85" width="343" height="418"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="FhD-J9-sBI" id="PIs-gx-cgQ"/>
+                                    <outlet property="delegate" destination="FhD-J9-sBI" id="OWz-ZQ-m50"/>
+                                </connections>
                             </tableView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zkN-A8-dSN">
                                 <rect key="frame" x="20" y="20" width="335" height="50"/>
