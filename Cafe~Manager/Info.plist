@@ -62,5 +62,13 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Allow location to visit Cafe NIBM</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Allow location to visit Cafe NIBM</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Allow location to visit Cafe NIBM</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allow location to visit Cafe NIBM</string>
 </dict>
 </plist>

@@ -30,4 +30,5 @@ class InputValidator {
         let mobilePred = NSPredicate(format: "SELF MATCHES %@", mobileRegEx)
         return mobilePred.evaluate(with: mobile)
     }
+    
 }

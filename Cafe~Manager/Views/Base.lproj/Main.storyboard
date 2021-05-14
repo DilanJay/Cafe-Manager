@@ -633,7 +633,7 @@
                                     <action selector="btnSignOut:" destination="1rQ-4G-Iw9" eventType="touchUpInside" id="95K-6A-cfk"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="E9w-Zo-2uk">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="E9w-Zo-2uk">
                                 <rect key="frame" x="20" y="60" width="335" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="HUa-ae-GzT"/>
@@ -936,8 +936,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="collectionView" destination="zkN-A8-dSN" id="Lqu-OZ-WgB"/>
-                        <outlet property="tblPreview" destination="5dL-BY-Puf" id="gmN-ov-anU"/>
+                        <outlet property="collectionView" destination="zkN-A8-dSN" id="X7F-Fq-kRO"/>
+                        <outlet property="tblPreview" destination="5dL-BY-Puf" id="2qI-kp-kDe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8u8-XZ-KUQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

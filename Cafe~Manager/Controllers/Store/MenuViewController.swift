@@ -38,6 +38,23 @@ class MenuViewController: UIViewController {
     }
 
     @IBAction func btnAddCategory(_ sender: UIButton) {
+        if let foodName = txtFoodName.text , foodName.isEmpty {
+            Loaf("Please enter food name",  state: .error, sender: self).show()
+            return
+        }
+        if let description = txtDescription.text , description.isEmpty {
+            Loaf("Please enter food name",  state: .error, sender: self).show()
+            return
+        }
+        if let price = txtPrice.text , price.isEmpty {
+            Loaf("Please enter food name",  state: .error, sender: self).show()
+            return
+        }
+        if let category = txtCategory.text , category.isEmpty {
+            Loaf("Please enter food name",  state: .error, sender: self).show()
+            return
+        }
+        
         let foodItem = FoodItem(
             foodID: "",
             foodImage: "",
@@ -48,6 +65,7 @@ class MenuViewController: UIViewController {
             category: categoryList[selectedCategoryIndex].categoryName)
         
         self.addFoodItem(foodItem: foodItem)
+        
     }
     
     @objc func imagePickerClicked(_ sender: UIImageView) {

@@ -15,11 +15,14 @@ class StoreViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     
+    
     let sessionManager = SessionManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
+
 
     @IBAction func btnSignOut(_ sender: UIButton) {
         sessionManager.clearUserLoggedStatus()

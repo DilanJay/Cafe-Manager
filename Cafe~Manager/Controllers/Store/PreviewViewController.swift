@@ -19,6 +19,7 @@ class PreviewViewController: UIViewController {
     var categoryList: [Category] = []
     var foodItemList: [FoodItem] = []
     var filteredList: [FoodItem] = []
+    
     var selectedCategoryIndex = 0
     var selectedFoodIndex = 0
     
@@ -32,10 +33,10 @@ class PreviewViewController: UIViewController {
         }
         tblPreview.register(UINib(nibName: FoodItemTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: FoodItemTableViewCell.reuseIdentifier)
         
-
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+
+    override func viewDidAppear(_ animated: Bool) {
         refreshCategory()
         refreshFood()
     }
@@ -110,7 +111,7 @@ extension PreviewViewController: UITabBarDelegate, UITableViewDataSource {
         //cell.delegate = self
         cell.confligCell(foodItem: filteredList[indexPath.row], index: indexPath.row)
         return cell
-    } 
+    }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedFoodIndex = indexPath.row

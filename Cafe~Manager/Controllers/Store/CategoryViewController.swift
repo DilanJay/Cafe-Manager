@@ -28,6 +28,11 @@ class CategoryViewController: UIViewController {
     }
 
     @IBAction func btnAdd(_ sender: UIButton) {
+        if let category = txtAddCategory.text , category.isEmpty {
+            Loaf("Please enter category name",  state: .error, sender: self).show()
+            return
+        }
+        
         if let name  = txtAddCategory.text {
             addCategory(name: name)
         } else {
@@ -44,13 +49,15 @@ extension CategoryViewController {
             .child("name")
             .setValue(name) {
                 error, ref in
-                if let error = error {
+                if let error = error{
                     Loaf(error.localizedDescription, state: .error, sender: self).show()
                 } else {
                     Loaf("New category creted successfully", state: .success, sender: self).show()
                     self.refreshCategory()
                 }
+                
             }
+        
     }
     
     func refreshCategory() {
